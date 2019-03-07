@@ -1,0 +1,53 @@
+<h2 align=center>Move Image by Ethan </h2>
+
+<input type=text value=0 onMouseOver="{
+   this.value = 'x = ' + document.getElementById('myImage01').style.left
+}">
+
+<img src="myImage01.jpg" id="myImage01"
+style="position:relative; z-index:-1; left:0px; top:0px; height:100px; width:100px">
+<input type=button value="Go Left" onClick="{
+   document.getElementById('myImage01').style.left =
+   parseInt (document.getElementById('myImage01').style.left) + -10 + 'px'
+}">
+
+
+<input type=button value="Go Right" onClick="{
+   document.getElementById('myImage01').style.left =
+   parseInt (document.getElementById('myImage01').style.left) + 10 + 'px'
+}">
+
+<input type=button value="Go Down" onClick="{
+   document.getElementById('myImage01').style.top =
+   parseInt (document.getElementById('myImage01').style.left) + 10 + 'px'
+}">
+
+<input type=button value="Go Up" onClick="{
+   document.getElementById('myImage01').style.top =
+   parseInt (document.getElementById('myImage01').style.left) + -10 + 'px'
+}">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This button displays the time.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+
+
+<input type=button value="diagonal" onClick="{
+   document.getElementById('myImage01').style.left = parseInt (document.getElementById('myImage01').style.left) + 10 + 'px'
+   document.getElementById('myImage01').style.top = parseInt (document.getElementById('myImage01').style.top) + 10 + 'px'
+}">
