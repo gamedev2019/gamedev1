@@ -1,0 +1,113 @@
+<h1 align=center> Advance Web Page by Ethan
+
+<font color=salmon> Prove you can use: Tables, Lists, Forms, CSS
+</font>
+
+<table border=1>
+<tr><td>A</td><td>1</td></tr>
+<tr><td>B</td><td>2</td></tr>
+</table>
+
+<ol> Fav. foods
+<li> Pizza
+<li> Chicken
+</ol>
+
+<ul> Fav. Countries
+<li> Canada
+<li> Iceland
+</ul>
+
+The following are all form elements:<br>
+<form >
+
+First Name:<input type=text id="myText01" value="Ethan"><br>
+<input type=checkbox><br>
+<input type=radio><br>
+
+<input type=hidden><input type=file>
+<input type =reset><input type=submit>
+
+<input type=button value=click onclick="alert('You Clicked It')"><br>
+<textarea id="myArea01" cols=60 rows=5 > wow </textarea><br>
+<select id="mySelect01" size=2>
+<option value='myOne'>One
+<option value='myTwo'>two
+<option value='mythree'>Three
+</select>
+
+</form>
+
+<html>
+<head>
+<style>
+p {
+  border: 1px solid purple;
+  padding: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>3 BOXS</h1>
+
+<p>LOOK!</p>
+<p>These words are in...</p>
+<p>BOXS!</p>
+
+</body>
+</html>
+
+<ol>
+
+<html>
+<style>
+#container {
+  width: 690px;
+  height: 400px;
+  position: relative;
+  background: Salmon;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: yellow;
+}
+
+}
+#animate {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: blue
+;
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p> Small and Large square travelling from one corner to the other
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>
