@@ -1,0 +1,43 @@
+<h2 align=center>t4a03-random-bounce-console-score-ethan
+
+<img src="Ghost01.png" id="Ghost01" style="position:relative;
+z-index:-1; left:0px; top:0px; height:100px; width:100px;">    
+
+<input type=text id=myScore value=0>
+
+<script>
+var myLooping = 0
+var mySpeed = 10
+var myDirection = 1
+var myTotal = 0
+</script>
+
+<input type=button value="auto right" onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+
+   mySpeed = (Math.floor(Math.random()*50)+5) * myDirection
+
+   document.getElementById('Ghost01').style.left =
+   parseInt(document.getElementById('Ghost01').style.left) + mySpeed + 'px'
+
+
+   // bounce of right side of screen
+   if (parseInt(document.getElementById('Ghost01').style.left) > 200){
+     myDirection = myDirection * -1
+     myTotal = myTotal + 1
+     document.getElementById('myScore').value = myTotal
+   }
+
+    // you write the left side bounce
+
+
+
+  console.log(mySpeed)
+  //console.log(myTotal)
+  }, 60)
+}">         
+
+
+</body>
+</html>
